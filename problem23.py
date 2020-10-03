@@ -3,19 +3,22 @@ import time
 
 start = time.time()
 
+
 def divisors(n):
     divs = []
-    for i in range(2,int(sqrt(n))+1):
+    for i in range(2, int(sqrt(n))+1):
         if n % i == 0:
             if i*i == n:
                 divs.extend([i])
             else:
-                divs.extend([i,n/i])
+                divs.extend([i, n/i])
     return divs
+
 
 ab = []
 
-for i in range(12,28123):
+
+for i in range(12, 28123):
     if sum(divisors(i)) > i:
         ab.append(i)
 

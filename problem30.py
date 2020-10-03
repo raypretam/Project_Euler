@@ -7,7 +7,6 @@ The upper limit will be 9^5 + 9^5 + 9^5 + 9^5 + 9^5.
 """
 
 
-# Fast Method for finding exponents of a given number.
 def check_sum(num):
     curr_sum = 0
     temp = num

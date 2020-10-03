@@ -1,6 +1,6 @@
 import time
 
-
+"""
 def find_exp(x, y):
     res = 1
     while y > 0:
@@ -9,6 +9,7 @@ def find_exp(x, y):
         y = y >> 1
         x = x * x
     return res
+"""
 
 
 # Brute Force Solution of checking all the pairs
@@ -16,7 +17,8 @@ def distinct_seq(a, b):
     lookup = set()
     for i in range(2, a+1):
         for j in range(2, b+1):
-            lookup.add(find_exp(i, j))  # finding exponent in O(logj) time for each i
+            # if find_exp(i, j) not in lookup:
+            lookup.add(i**j)  # finding exponent in O(logj) time for each i
 
     print(len(lookup))
 
